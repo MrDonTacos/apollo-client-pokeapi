@@ -1,0 +1,7 @@
+.content {
+    height: 80vh;
+    width: 80vw;
+    margin: 0 10% 0 10%;
+    background-color: bisque;
+    overflow: scroll;
+}

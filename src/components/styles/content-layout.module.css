@@ -1,0 +1,18 @@
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.fullDetail {
+    display: flex;
+    flex-wrap: nowrap;
+}

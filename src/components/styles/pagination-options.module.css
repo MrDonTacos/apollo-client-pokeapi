@@ -1,0 +1,14 @@
+.options {
+    margin: 2%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.pagination {
+    
+}
+
+.sortOptions {
+
+}
