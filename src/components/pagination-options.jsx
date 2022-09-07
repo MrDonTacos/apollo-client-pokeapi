@@ -6,48 +6,50 @@ import ViewModuleIcon from '@mui/icons-material/ViewModule';
 import ViewQuiltIcon from '@mui/icons-material/ViewQuilt';
 
 
-const PaginationOptions = ({total, offset, handleEventOffSet, limit, handleEventPageSize}) => {
+const PaginationOptions = ({total, offset, handleEventOffSet, limit, handleEventPageSize, handleEventLayout, view}) => {
     const [pagination, setPagination] = useState()
 
     const numberCards = [10, 20, 30, 40]
     useEffect(() => {
-        let numberPages = total / limit
         let offSetList = [];
+        let numberPages = total / limit
 
         for(let i = 0; i < numberPages; i++){
-            offSetList.push({text: `Página ${i + 1}`, value: i*limit})
+            offSetList.push({text: `Page ${i + 1}`, value: i*limit})
         }
         setPagination(offSetList)
-    })
+    }, [total, limit])
 
     return (
         <div className={options}>
-            <div>
+            <div> 
                 <Select
-                  labelId="offset"
-                  id="offsetId"
+                  variant="filled"
+                  labelId="offset-select-label"
+                  id="offset"
                   value={offset}
-                  label="Página"
+                  label="page"
                   onChange={handleEventOffSet}
                   >
                     {pagination?.map((data) => <MenuItem key={data.value} value={data.value}>{data.text}</MenuItem>)}
                 </Select>
                 <Select
-                  labelId="numberPage"
-                  id="numberPageId"
+                  variant="filled"
+                  labelId="number-page-select-label"
+                  id="number-page"
                   value={limit}
-                  label="Número de elementos por página"
+                  label="Cards"
                   onChange={handleEventPageSize}
                   >
-                    {numberCards.map((data) => <MenuItem key={data} value={data}>{data}</MenuItem>)}
+                    {numberCards.map((data) => <MenuItem key={data} value={data}>{data} Cards</MenuItem>)}
                 </Select>
             </div>
             <div>
                 <ToggleButtonGroup
                 orientation="horizontal"
-                value={1}
+                value={view}
                 exclusive
-                onChange={(e) => {}}>
+                onChange={handleEventLayout}>
                     <ToggleButton value="list" aria-label="list">
                       <ViewListIcon />
                     </ToggleButton>

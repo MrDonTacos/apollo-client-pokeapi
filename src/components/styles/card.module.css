@@ -1,10 +1,29 @@
 .card {
+    border: 2px solid black;
+    border-radius: 10px 10px 0 0;
+    overflow:hidden;
+    margin: 2% 10% 2% 10%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+.rowCard {
     margin: 4%;
     height: 100%;
     width: 30%;
     border: 2px solid black;
     border-radius: 10px 10px 0 0;
     overflow:hidden;
+}
+
+.fullCard {
+    border: 2px solid black;
+    border-radius: 10px 10px 0 0;
+    overflow:hidden;
+    margin: 2% 10% 2% 10%;
+    width: 40%; 
+    height: 100%;
 }
 
 .topCard {
@@ -15,6 +34,8 @@
 
 .bottomCard {
     display: flex;
+    width: 100%;
+    padding: 2% 0 2% 0;
     flex-direction: column;
     align-items: center;
     background-color: white;

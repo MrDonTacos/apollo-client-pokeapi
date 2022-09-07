@@ -1,12 +1,10 @@
 import React from "react";
-import {column, list, fullDetail} from './styles/content-layout.module.css'
-import CardList from "./cards";
+import {row, list, fullDetail} from './styles/content-layout.module.css'
 
-const ContentLayout = () => {
-    const Layout = 0;
+const ContentLayout = ({layout, children}) => {
     return (
-        <div className={Layout === 0 ? list : Layout === 1 ? column : fullDetail}>
-            <CardList />
+        <div className={layout === 'list' ? list : layout === 'module' ? row : fullDetail}>
+            {children}
         </div>
     )
 }

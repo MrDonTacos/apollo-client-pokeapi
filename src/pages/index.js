@@ -1,11 +1,11 @@
 import * as React from "react"
 import Layout from "../components/layout"
-import ContentLayout from "../components/content-layout"
+import CardList from "../components/cards"
 
 const IndexPage = () => {
   return (
     <Layout>
-      <ContentLayout />
+      <CardList />
     </Layout>
   )
 }
