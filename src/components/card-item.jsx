@@ -10,6 +10,7 @@ const Card = ({pokemon, layout}) => {
             <img src={image} alt={nameCard}/>
         </div>
         <div className={bottomCard}>
+            
             <p>id: {id}</p>
             <p>name: {name}</p>
             <p>weight: {weight}</p>
