@@ -3,6 +3,9 @@ import Card from "./card-item";
 import PaginationOptions from "./pagination-options";
 import { gql, useQuery } from "@apollo/client";
 import ContentLayout from './content-layout'
+import { CircularProgress } from "@mui/material";
+import {Link} from 'gatsby'
+import styled from '@emotion/styled'
 
 const GET_ALL_POKEMONS = gql`
     query Query($limit: Int, $offset: Int) {
@@ -16,7 +19,6 @@ const GET_ALL_POKEMONS = gql`
               weight
               image
               abilities {
-                id
                 name
               }
             }
@@ -57,8 +59,9 @@ const CardList = () => {
         setLayout(value)
     }
 
-    if (loading) return <div>...Loading</div>
+    if (loading) return <ContentLayout layout='loading'><CircularProgress color="secondary" /></ContentLayout>
     if (error) return <div>¡ERROR!</div>
+
 
     return (
         <div>
@@ -69,5 +72,13 @@ const CardList = () => {
         </div>
     )
 }
+
+const StyledLink = styled(Link)({
+    display: 'flex',
+    flexDirection: 'row',
+    textDecoration: 'none',
+    cursor: 'pointer'
+  });
+
 
 export default CardList
