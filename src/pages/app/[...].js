@@ -4,6 +4,8 @@ import {Router} from '@reach/router'
 import CardList from "../../components/cards";
 import Pokemon from "../../components/pokemon";
 import Login from "../../components/login";
+import CreatePokemon from "../../components/create-pokemon"
+
 const App = () => {
     return (
         <Layout>
@@ -11,6 +13,7 @@ const App = () => {
                 <CardList path="/" />
                 <Pokemon path="/pokemon/:name" />
                 <Login path="/login" />
+                <CreatePokemon path="/create" />
             </Router>
         </Layout>
     )
