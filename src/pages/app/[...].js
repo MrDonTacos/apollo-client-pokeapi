@@ -5,11 +5,12 @@ import CardList from "../../components/cards";
 import Pokemon from "../../components/pokemon";
 import Login from "../../components/login";
 import CreatePokemon from "../../components/create-pokemon"
+import {wrapper} from "../../components/styles/router.module.css"
 
 const App = () => {
     return (
         <Layout>
-            <Router basepath="/app">
+            <Router basepath="/app" className={wrapper}>
                 <CardList path="/" />
                 <Pokemon path="/pokemon/:name" />
                 <Login path="/login" />

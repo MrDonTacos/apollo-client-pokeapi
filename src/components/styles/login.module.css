@@ -1,6 +1,29 @@
-.form {
+.login {
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
+}
+
+.saveButton {
+    background-color: rgba(26, 26, 215, 0.626);
+    color: white;
+    font-size: 1em;
+    width: 40%;
+    height: 3rem;
+    border-radius: 10px;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+.cancelButton {
+    background-color: rgba(255, 19, 19, 0.626);
+    color: white;
+    font-size: 1em;
+    width: 40%;
+    height: 3rem;
+    border-radius: 10px;
+    border: 1px solid;
+    cursor: pointer;
 }
